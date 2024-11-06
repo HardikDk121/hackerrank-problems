@@ -4,15 +4,14 @@
 #include <stdlib.h>
 
 int main() {
-	
-    int number ,sumofdigits=0 ,ten_multiplier=10;
+    
+    int number ,sumofdigits=0;
     scanf("%d", &number);
     //Complete the code to calculate the sum of the five digits on n.
-    while(ten_multiplier <= 10000)
+    while(number)
     {
-        number=number % ten_multiplier;
-        sumofdigits = sumofdigits + number;
-        ten_multiplier = ten_multiplier * 10;        
+        sumofdigits = sumofdigits + (number % 10);        
+        number=number / 10;
         
     }
     printf("%d",sumofdigits);
